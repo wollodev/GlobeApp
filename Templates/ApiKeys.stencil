@@ -1,0 +1,7 @@
+public enum ApiKeys: String {
+    case googleMaps = "{{ argument.googleMaps}}"
+    
+    public var key: String {
+        return self.rawValue
+    }
+}
