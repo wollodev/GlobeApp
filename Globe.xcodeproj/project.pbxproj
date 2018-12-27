@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		62000E606F74FADE6610D585 /* Pods_Globe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21379269689CDB99B0A2148 /* Pods_Globe.framework */; };
 		D613485621D157A800F4F284 /* ApiKeys.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D613485521D157A800F4F284 /* ApiKeys.generated.swift */; };
-		D6B3698121D143A4006752C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697621D143A4006752C9 /* ViewController.swift */; };
+		D680A85021D3E868007B54D8 /* UIView+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A84F21D3E868007B54D8 /* UIView+Constraint.swift */; };
+		D680A85221D3F3AB007B54D8 /* GeoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A85121D3F3AB007B54D8 /* GeoInfoViewController.swift */; };
+		D680A85421D3F454007B54D8 /* GeoInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A85321D3F454007B54D8 /* GeoInfoViewModel.swift */; };
+		D680A85721D3FC13007B54D8 /* ReverseGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A85621D3FC13007B54D8 /* ReverseGeocoder.swift */; };
+		D680A85B21D3FCEB007B54D8 /* ReverseGeocoderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A85A21D3FCEB007B54D8 /* ReverseGeocoderError.swift */; };
+		D680A85D21D3FD9F007B54D8 /* GoogleMapsReverseGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A85C21D3FD9F007B54D8 /* GoogleMapsReverseGeocoder.swift */; };
+		D680A86121D404E7007B54D8 /* UIViewController+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A86021D404E7007B54D8 /* UIViewController+Embed.swift */; };
+		D6B3698121D143A4006752C9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697621D143A4006752C9 /* MapViewController.swift */; };
 		D6B3698521D143A4006752C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697C21D143A4006752C9 /* AppDelegate.swift */; };
 		D6B3699121D143BB006752C9 /* GlobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3698F21D143BB006752C9 /* GlobeTests.swift */; };
 		D6B3699C21D14408006752C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B3699621D14408006752C9 /* Assets.xcassets */; };
 		D6B3699D21D14408006752C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3699721D14408006752C9 /* LaunchScreen.storyboard */; };
-		D6B3699E21D14408006752C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B3699921D14408006752C9 /* Main.storyboard */; };
 		FDCFCC547849BAA06D91D5CC /* Pods_GlobeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D99373595522CAD20484A84 /* Pods_GlobeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,15 +42,21 @@
 		D21379269689CDB99B0A2148 /* Pods_Globe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Globe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E6E99218B34AD9CE41E5C8 /* Pods-Globe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Globe.release.xcconfig"; path = "Target Support Files/Pods-Globe/Pods-Globe.release.xcconfig"; sourceTree = "<group>"; };
 		D613485521D157A800F4F284 /* ApiKeys.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeys.generated.swift; sourceTree = "<group>"; };
+		D680A84F21D3E868007B54D8 /* UIView+Constraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraint.swift"; sourceTree = "<group>"; };
+		D680A85121D3F3AB007B54D8 /* GeoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoInfoViewController.swift; sourceTree = "<group>"; };
+		D680A85321D3F454007B54D8 /* GeoInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoInfoViewModel.swift; sourceTree = "<group>"; };
+		D680A85621D3FC13007B54D8 /* ReverseGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoder.swift; sourceTree = "<group>"; };
+		D680A85A21D3FCEB007B54D8 /* ReverseGeocoderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoderError.swift; sourceTree = "<group>"; };
+		D680A85C21D3FD9F007B54D8 /* GoogleMapsReverseGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsReverseGeocoder.swift; sourceTree = "<group>"; };
+		D680A86021D404E7007B54D8 /* UIViewController+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embed.swift"; sourceTree = "<group>"; };
 		D6B3695221D13F10006752C9 /* Globe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3696621D13F11006752C9 /* GlobeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6B3697621D143A4006752C9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6B3697621D143A4006752C9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D6B3697C21D143A4006752C9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6B3698F21D143BB006752C9 /* GlobeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobeTests.swift; sourceTree = "<group>"; };
 		D6B3699021D143BB006752C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B3699621D14408006752C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6B3699821D14408006752C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D6B3699A21D14408006752C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6B3699B21D14408006752C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +108,51 @@
 			path = Credentials;
 			sourceTree = "<group>";
 		};
+		D680A84C21D3D8D3007B54D8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D680A84D21D3DE71007B54D8 /* MapScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D680A84D21D3DE71007B54D8 /* MapScene */ = {
+			isa = PBXGroup;
+			children = (
+				D6B3697621D143A4006752C9 /* MapViewController.swift */,
+				D680A85121D3F3AB007B54D8 /* GeoInfoViewController.swift */,
+				D680A85321D3F454007B54D8 /* GeoInfoViewModel.swift */,
+			);
+			path = MapScene;
+			sourceTree = "<group>";
+		};
+		D680A84E21D3E831007B54D8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D680A84F21D3E868007B54D8 /* UIView+Constraint.swift */,
+				D680A86021D404E7007B54D8 /* UIViewController+Embed.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D680A85521D3FC03007B54D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D680A85921D3FCD7007B54D8 /* ReverseGeocoder */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D680A85921D3FCD7007B54D8 /* ReverseGeocoder */ = {
+			isa = PBXGroup;
+			children = (
+				D680A85621D3FC13007B54D8 /* ReverseGeocoder.swift */,
+				D680A85C21D3FD9F007B54D8 /* GoogleMapsReverseGeocoder.swift */,
+				D680A85A21D3FCEB007B54D8 /* ReverseGeocoderError.swift */,
+			);
+			path = ReverseGeocoder;
+			sourceTree = "<group>";
+		};
 		D6B3694921D13F10006752C9 = {
 			isa = PBXGroup;
 			children = (
@@ -120,8 +177,10 @@
 		D6B3697521D143A4006752C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D680A85521D3FC03007B54D8 /* Services */,
+				D680A84E21D3E831007B54D8 /* Extensions */,
+				D680A84C21D3D8D3007B54D8 /* Scenes */,
 				D613485421D157A800F4F284 /* Credentials */,
-				D6B3697621D143A4006752C9 /* ViewController.swift */,
 				D6B3697C21D143A4006752C9 /* AppDelegate.swift */,
 			);
 			path = Sources;
@@ -141,7 +200,6 @@
 			children = (
 				D6B3699621D14408006752C9 /* Assets.xcassets */,
 				D6B3699721D14408006752C9 /* LaunchScreen.storyboard */,
-				D6B3699921D14408006752C9 /* Main.storyboard */,
 				D6B3699B21D14408006752C9 /* Info.plist */,
 			);
 			path = Resources;
@@ -234,7 +292,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6B3699E21D14408006752C9 /* Main.storyboard in Resources */,
 				D6B3699D21D14408006752C9 /* LaunchScreen.storyboard in Resources */,
 				D6B3699C21D14408006752C9 /* Assets.xcassets in Resources */,
 			);
@@ -387,7 +444,14 @@
 			files = (
 				D6B3698521D143A4006752C9 /* AppDelegate.swift in Sources */,
 				D613485621D157A800F4F284 /* ApiKeys.generated.swift in Sources */,
-				D6B3698121D143A4006752C9 /* ViewController.swift in Sources */,
+				D680A85721D3FC13007B54D8 /* ReverseGeocoder.swift in Sources */,
+				D680A85D21D3FD9F007B54D8 /* GoogleMapsReverseGeocoder.swift in Sources */,
+				D680A85B21D3FCEB007B54D8 /* ReverseGeocoderError.swift in Sources */,
+				D680A85421D3F454007B54D8 /* GeoInfoViewModel.swift in Sources */,
+				D680A86121D404E7007B54D8 /* UIViewController+Embed.swift in Sources */,
+				D680A85221D3F3AB007B54D8 /* GeoInfoViewController.swift in Sources */,
+				D680A85021D3E868007B54D8 /* UIView+Constraint.swift in Sources */,
+				D6B3698121D143A4006752C9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,14 +480,6 @@
 				D6B3699821D14408006752C9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		D6B3699921D14408006752C9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6B3699A21D14408006752C9 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -550,8 +606,9 @@
 			baseConfigurationReference = 97A9002E19C9E36284631758 /* Pods-Globe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NX788AYV4;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,8 +627,9 @@
 			baseConfigurationReference = D3E6E99218B34AD9CE41E5C8 /* Pods-Globe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NX788AYV4;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
