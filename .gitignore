@@ -5,6 +5,9 @@
 ## Environment Variables
 env-vars.sh
 
+## Generated Files
+*.generated.swift
+
 ## Build generated
 build/
 DerivedData/
