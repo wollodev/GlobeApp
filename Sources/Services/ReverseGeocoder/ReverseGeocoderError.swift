@@ -1,2 +1,4 @@
-struct ReverseGeocoderError: Error {
+enum ReverseGeocoderError: Error {
+    case parsingError
+    case networkError
 }
