@@ -8,7 +8,7 @@ class MapViewController: UIViewController {
     let startingCoordinate = CLLocationCoordinate2D(latitude: 51.0902094, longitude: 6.585863)
     let zoomLevel = Float(15)
 
-    // MARK: - Subviews
+    // MARK: - Properties
 
     private lazy var mapView: GMSMapView = {
         let mapView = GMSMapView(frame: .zero)
@@ -22,6 +22,10 @@ class MapViewController: UIViewController {
 
         return mapView
     }()
+
+    private lazy var reverseGeocoder = GoogleMapsReverseGeocoder()
+
+    private weak var overlay: GeoInfoViewController?
 
     // MARK: - UIViewController Lifecycle
 
@@ -38,13 +42,14 @@ class MapViewController: UIViewController {
     // MARK: - Methods
 
     private func showInfoScreen(for coordinate: CLLocationCoordinate2D) {
-        let reverseGeocoder = GoogleMapsReverseGeocoder()
-        let infoViewModel = GeoInfoViewModel(reverseGeocoder: reverseGeocoder)
-        let info = GeoInfoViewController(viewModel: infoViewModel, coordinate: coordinate)
-        info.view.backgroundColor = .red
+        let geoInfoViewModel = GeoInfoViewModel(reverseGeocoder: reverseGeocoder)
+        let geoInfoViewController = GeoInfoViewController(viewModel: geoInfoViewModel, coordinate: coordinate)
+        geoInfoViewController.view.backgroundColor = .red
 
-        let insets = UIView.Insets(top: 20, left: 20, bottom: 20, right: 20)
-        self.embed(info, with: insets, respectSafeArea: true)
+        let insets = UIView.Insets(top: 200, left: 20, bottom: 20, right: 20)
+        self.embed(geoInfoViewController, with: insets, respectSafeArea: true)
+
+        self.overlay = geoInfoViewController
     }
 
 }
@@ -53,6 +58,11 @@ class MapViewController: UIViewController {
 
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        showInfoScreen(for: coordinate)
+        guard let infoViewController = self.overlay else {
+            showInfoScreen(for: coordinate)
+            return
+        }
+
+        infoViewController.update(for: coordinate)
     }
 }

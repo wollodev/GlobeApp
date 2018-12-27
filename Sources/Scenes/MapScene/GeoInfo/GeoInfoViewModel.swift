@@ -46,6 +46,6 @@ class GeoInfoViewModel {
 
     private func update(with address: ReverseGeocoderAddress) {
         streetText.swap(address.street)
-        cityAndCountryText.swap("\(address.postalCode) \(address.city),\(address.country)")
+        cityAndCountryText.swap("\(address.postalCode) \(address.city), \(address.country)")
     }
 }

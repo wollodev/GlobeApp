@@ -42,6 +42,12 @@ class GeoInfoViewController: UIViewController {
         cityAndCountryLabel.reactive.text <~ viewModel.cityAndCountryText
     }
 
+    // MARK: - External Methods
+
+    func update(for coordinates: CLLocationCoordinate2D) {
+        self.viewModel.fetchAddress(for: coordinates)
+    }
+
     // MARK: - IBActions
 
     @IBAction private func didPressCloseButton(_ sender: UIButton) {
