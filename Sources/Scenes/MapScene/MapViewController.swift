@@ -14,7 +14,7 @@ class MapViewController: UIViewController {
         let mapView = GMSMapView(frame: .zero)
         mapView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(mapView)
-        mapView.constraint(to: view)
+        mapView.constraint(to: view, with: .zero)
 
         mapView.camera = GMSCameraPosition(target: startingCoordinate, zoom: zoomLevel, bearing: 0, viewingAngle: 0)
 
@@ -43,7 +43,8 @@ class MapViewController: UIViewController {
         let info = GeoInfoViewController(viewModel: infoViewModel, coordinate: coordinate)
         info.view.backgroundColor = .red
 
-        self.embed(info, with: UIEdgeInsets(top: 100, left: 100, bottom: 100, right: 100))
+        let insets = UIView.Insets(top: 20, left: 20, bottom: 20, right: 20)
+        self.embed(info, with: insets, respectSafeArea: true)
     }
 
 }

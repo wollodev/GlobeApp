@@ -1,12 +1,14 @@
 import UIKit
 
 extension UIViewController {
-    func embed(_ child: UIViewController, with inset: UIEdgeInsets = .zero) {
+    func embed(_ child: UIViewController, with insets: UIView.Insets? = nil, respectSafeArea: Bool) {
         addChild(child)
         view.addSubview(child.view)
         child.didMove(toParent: self)
 
-        child.view.constraint(to: view, with: inset)
+        if let insets = insets {
+            child.view.constraint(to: view, with: insets, respectSafeArea: respectSafeArea)
+        }
     }
 
     func remove() {
