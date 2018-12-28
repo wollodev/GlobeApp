@@ -6,7 +6,7 @@ class MapViewController: UIViewController {
     // MARK: - Constants
 
     let startingCoordinate = CLLocationCoordinate2D(latitude: 51.0902094, longitude: 6.585863)
-    let zoomLevel = Float(15)
+    let zoomLevel = Float(15.0)
 
     // MARK: - Properties
 
@@ -46,7 +46,7 @@ class MapViewController: UIViewController {
         let geoInfoViewController = GeoInfoViewController(viewModel: geoInfoViewModel, coordinate: coordinate)
         geoInfoViewController.view.backgroundColor = .red
 
-        let insets = UIView.Insets(top: 200, left: 20, bottom: 20, right: 20)
+        let insets = UIView.Insets(left: 20.0, bottom: 20.0, right: 20.0)
         self.embed(geoInfoViewController, with: insets, respectSafeArea: true)
 
         self.overlay = geoInfoViewController

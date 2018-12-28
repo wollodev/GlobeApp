@@ -11,6 +11,7 @@ class GeoInfoViewController: UIViewController {
 
     // MARK: - IBOutlets
 
+    @IBOutlet private weak var container: UIView!
     @IBOutlet private weak var streetLabel: UILabel!
     @IBOutlet private weak var cityAndCountryLabel: UILabel!
 
@@ -29,12 +30,24 @@ class GeoInfoViewController: UIViewController {
     // MARK: - UIViewController Lifecycle
 
     override func viewDidLoad() {
+        resetSubviews()
         setupView()
         bindViewModel()
     }
 
+    private func resetSubviews() {
+        streetLabel.text = nil
+        cityAndCountryLabel.text = nil
+    }
+
     private func setupView() {
         view.translatesAutoresizingMaskIntoConstraints = false
+        makeRoundCorners()
+    }
+
+    private func makeRoundCorners() {
+        view.layer.cornerRadius = 22.0
+        view.layer.masksToBounds = true
     }
 
     private func bindViewModel() {
