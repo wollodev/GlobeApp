@@ -42,6 +42,10 @@ struct ReverseGeocoderAddress: Decodable {
         let superContainer = try decoder.container(keyedBy: RootKeys.self)
         var results = try superContainer.nestedUnkeyedContainer(forKey: .results)
 
+        guard results.count != 0 else {
+            throw ReverseGeocoderError.noResult
+        }
+
         let addressComponents = try results.nestedContainer(keyedBy: ResultKeys.self)
 
         var componentContainer = try addressComponents.nestedUnkeyedContainer(forKey: .addressComponents)

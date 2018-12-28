@@ -13,72 +13,66 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeoInfoViewController" customModule="Globe" customModuleProvider="target">
             <connections>
-                <outlet property="cityAndCountryLabel" destination="u1l-ND-Odi" id="6We-LE-mha"/>
-                <outlet property="container" destination="rPu-65-mB8" id="NAV-dZ-68L"/>
-                <outlet property="streetLabel" destination="xLo-ac-jD4" id="6kX-t5-vax"/>
+                <outlet property="contentContainer" destination="4xY-2G-Ph6" id="03J-qq-MQi"/>
+                <outlet property="subtitleLabel" destination="u1l-ND-Odi" id="6We-LE-mha"/>
+                <outlet property="titleLabel" destination="xLo-ac-jD4" id="6kX-t5-vax"/>
                 <outlet property="view" destination="iN0-l3-epB" id="hgG-Um-Smt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProgressView" customModule="Globe" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="335" height="128"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPu-65-mB8">
-                    <rect key="frame" x="0.0" y="0.0" width="335" height="128"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNq-l0-LH7">
+                    <rect key="frame" x="291" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="BXH-6c-XnW"/>
+                        <constraint firstAttribute="height" constant="44" id="JnV-id-MO4"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                    <state key="normal" image="cancel"/>
+                    <connections>
+                        <action selector="didPressCloseButton:" destination="-1" eventType="touchUpInside" id="ugQ-4P-jGj"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4xY-2G-Ph6">
+                    <rect key="frame" x="20" y="44" width="295" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNq-l0-LH7">
-                            <rect key="frame" x="291" y="0.0" width="44" height="44"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="44" id="BXH-6c-XnW"/>
-                                <constraint firstAttribute="height" constant="44" id="JnV-id-MO4"/>
-                            </constraints>
-                            <state key="normal" title="x"/>
-                            <connections>
-                                <action selector="didPressCloseButton:" destination="-1" eventType="touchUpInside" id="ugQ-4P-jGj"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt;Street&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLo-ac-jD4">
-                            <rect key="frame" x="20" y="44" width="295" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;&lt;Street&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLo-ac-jD4" customClass="SkeletonLabel" customModule="Globe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="20"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                             <color key="textColor" name="Headline"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="&lt;&lt;City, Country&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1l-ND-Odi">
-                            <rect key="frame" x="20" y="66" width="295" height="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="&lt;&lt;City, Country&gt;&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1l-ND-Odi" customClass="SkeletonLabel" customModule="Globe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="22" width="295" height="18"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                             <color key="textColor" name="Subhead"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="xLo-ac-jD4" firstAttribute="top" secondItem="rPu-65-mB8" secondAttribute="top" constant="44" id="F0w-3W-1ad"/>
-                        <constraint firstAttribute="height" constant="128" id="KB2-5F-Yfv"/>
-                        <constraint firstAttribute="trailing" secondItem="FNq-l0-LH7" secondAttribute="trailing" id="LoE-YS-kg1"/>
-                        <constraint firstItem="u1l-ND-Odi" firstAttribute="top" secondItem="xLo-ac-jD4" secondAttribute="bottom" constant="2" id="VC2-ae-3Oe"/>
-                        <constraint firstAttribute="trailing" secondItem="xLo-ac-jD4" secondAttribute="trailing" constant="20" id="aCQ-9D-dyE"/>
-                        <constraint firstItem="u1l-ND-Odi" firstAttribute="trailing" secondItem="xLo-ac-jD4" secondAttribute="trailing" id="e8z-FL-4dA"/>
-                        <constraint firstItem="xLo-ac-jD4" firstAttribute="leading" secondItem="rPu-65-mB8" secondAttribute="leading" constant="20" id="jci-tW-PsW"/>
-                        <constraint firstItem="FNq-l0-LH7" firstAttribute="top" secondItem="rPu-65-mB8" secondAttribute="top" id="lV8-Pz-Kij"/>
-                        <constraint firstAttribute="bottom" secondItem="u1l-ND-Odi" secondAttribute="bottom" constant="44" id="rhw-tC-cWC"/>
-                        <constraint firstItem="u1l-ND-Odi" firstAttribute="leading" secondItem="xLo-ac-jD4" secondAttribute="leading" id="xzJ-5y-LqZ"/>
+                        <constraint firstAttribute="height" constant="40" id="Taj-g7-wRm"/>
                     </constraints>
-                </view>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="rPu-65-mB8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3B9-KN-6x4"/>
-                <constraint firstAttribute="trailing" secondItem="rPu-65-mB8" secondAttribute="trailing" id="3jo-DU-hg0"/>
-                <constraint firstAttribute="bottom" secondItem="rPu-65-mB8" secondAttribute="bottom" id="CVr-MN-Wfc"/>
-                <constraint firstItem="rPu-65-mB8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zJh-wu-Eha"/>
+                <constraint firstItem="FNq-l0-LH7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MCY-mL-ih3"/>
+                <constraint firstAttribute="bottom" secondItem="4xY-2G-Ph6" secondAttribute="bottom" constant="44" id="PJQ-M2-KdY"/>
+                <constraint firstAttribute="trailing" secondItem="FNq-l0-LH7" secondAttribute="trailing" id="cbX-ky-i4V"/>
+                <constraint firstAttribute="trailing" secondItem="4xY-2G-Ph6" secondAttribute="trailing" constant="20" id="kjf-YC-AfJ"/>
+                <constraint firstItem="4xY-2G-Ph6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="oCF-MN-6Qt"/>
+                <constraint firstItem="4xY-2G-Ph6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="44" id="qXh-Ix-HXL"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="333.60000000000002" y="-91.754122938530742"/>
+            <point key="canvasLocation" x="332.80000000000001" y="-91.754122938530742"/>
         </view>
     </objects>
     <resources>
+        <image name="cancel" width="44" height="44"/>
         <namedColor name="Headline">
             <color red="0.039215686274509803" green="0.15294117647058825" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

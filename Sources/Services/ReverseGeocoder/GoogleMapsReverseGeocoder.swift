@@ -7,7 +7,6 @@ class GoogleMapsReverseGeocoder: ReverseGeocoder {
         SignalProducer<ReverseGeocoderAddress, ReverseGeocoderError> {
 
             let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?latlng=\(coordinate.latitude),\(coordinate.longitude)&location_type=ROOFTOP&result_type=street_address&key=\(ApiKeys.googleMaps.key)")!
-            print(url)
             let request = URLRequest(url: url)
             let config = URLSessionConfiguration.default
             let session = URLSession(configuration: config)
@@ -33,6 +32,8 @@ class GoogleMapsReverseGeocoder: ReverseGeocoder {
             let address = try JSONDecoder().decode(ReverseGeocoderAddress.self, from: data)
             observer.send(value: address)
             observer.sendCompleted()
+        } catch ReverseGeocoderError.noResult {
+            observer.send(error: .noResult)
         } catch {
             observer.send(error: .parsingError)
         }

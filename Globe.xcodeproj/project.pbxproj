@@ -19,6 +19,8 @@
 		D680A86421D4E33B007B54D8 /* GeoInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D680A86321D4E33B007B54D8 /* GeoInfoViewController.xib */; };
 		D680A86B21D4E946007B54D8 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A86A21D4E946007B54D8 /* NSObject+ClassName.swift */; };
 		D680A86F21D4F015007B54D8 /* ReverseGeocoderAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A86E21D4F015007B54D8 /* ReverseGeocoderAddress.swift */; };
+		D680A87221D671A1007B54D8 /* ProgressDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */; };
+		D680A87421D675E6007B54D8 /* SkeletonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87321D675E6007B54D8 /* SkeletonLabel.swift */; };
 		D6B3698121D143A4006752C9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697621D143A4006752C9 /* MapViewController.swift */; };
 		D6B3698521D143A4006752C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697C21D143A4006752C9 /* AppDelegate.swift */; };
 		D6B3699121D143BB006752C9 /* GlobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3698F21D143BB006752C9 /* GlobeTests.swift */; };
@@ -55,6 +57,8 @@
 		D680A86321D4E33B007B54D8 /* GeoInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeoInfoViewController.xib; sourceTree = "<group>"; };
 		D680A86A21D4E946007B54D8 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		D680A86E21D4F015007B54D8 /* ReverseGeocoderAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoderAddress.swift; sourceTree = "<group>"; };
+		D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDisplayable.swift; sourceTree = "<group>"; };
+		D680A87321D675E6007B54D8 /* SkeletonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLabel.swift; sourceTree = "<group>"; };
 		D6B3695221D13F10006752C9 /* Globe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3696621D13F11006752C9 /* GlobeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3697621D143A4006752C9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +181,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D680A87021D67190007B54D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */,
+				D680A87321D675E6007B54D8 /* SkeletonLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D6B3694921D13F10006752C9 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +214,7 @@
 		D6B3697521D143A4006752C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D680A87021D67190007B54D8 /* Views */,
 				D680A86D21D4EFFC007B54D8 /* Models */,
 				D680A85521D3FC03007B54D8 /* Services */,
 				D680A84E21D3E831007B54D8 /* Extensions */,
@@ -479,6 +493,8 @@
 				D680A86121D404E7007B54D8 /* UIViewController+Embed.swift in Sources */,
 				D680A85221D3F3AB007B54D8 /* GeoInfoViewController.swift in Sources */,
 				D680A85021D3E868007B54D8 /* UIView+Constraint.swift in Sources */,
+				D680A87421D675E6007B54D8 /* SkeletonLabel.swift in Sources */,
+				D680A87221D671A1007B54D8 /* ProgressDisplayable.swift in Sources */,
 				D6B3698121D143A4006752C9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,22 +29,39 @@ class GeoInfoViewModel {
     // MARK: - Fetch Address
 
     func fetchAddress(for coordinate: CLLocationCoordinate2D) {
-        state.swap(.inProgress)
+        startInProgress()
         reverseGeocoder
             .reverseGeocodeCoordinate(coordinate)
             .take(during: lifetime)
             .startWithResult { [weak self] result in
-            switch result {
-            case .success(let address):
-                self?.state.swap(.loaded)
-                self?.update(with: address)
-            case .failure:
-                self?.state.swap(.failed)
-            }
+                switch result {
+                case .success(let address):
+                    self?.update(with: address)
+                case .failure(let error):
+                    self?.update(with: error)
+                }
         }
     }
 
+    private func startInProgress() {
+        state.swap(.inProgress)
+        streetText.swap(nil)
+        cityAndCountryText.swap(nil)
+    }
+
+    private func update(with error: ReverseGeocoderError) {
+        state.swap(.failed)
+        switch error {
+        case .networkError, .parsingError:
+            streetText.swap("🥴 *sigh* error.")
+        case .noResult:
+            streetText.swap("🙄 I found nothing, nada.")
+        }
+        cityAndCountryText.swap(nil)
+    }
+
     private func update(with address: ReverseGeocoderAddress) {
+        state.swap(.loaded)
         streetText.swap(address.street)
         cityAndCountryText.swap("\(address.postalCode) \(address.city), \(address.country)")
     }

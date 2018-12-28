@@ -3,17 +3,23 @@ import CoreLocation
 import ReactiveCocoa
 import ReactiveSwift
 
+protocol GeoInfoViewControllerDelegate: AnyObject {
+    func geoInfoViewControllerSelectClose(_ viewController: GeoInfoViewController)
+}
+
 class GeoInfoViewController: UIViewController {
 
     // MARK: - Properties
 
     private let viewModel: GeoInfoViewModel
 
+    weak var delegate: GeoInfoViewControllerDelegate?
+
     // MARK: - IBOutlets
 
-    @IBOutlet private weak var container: UIView!
-    @IBOutlet private weak var streetLabel: UILabel!
-    @IBOutlet private weak var cityAndCountryLabel: UILabel!
+    @IBOutlet private weak var contentContainer: UIStackView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subtitleLabel: UILabel!
 
     // MARK: - Init
 
@@ -33,11 +39,14 @@ class GeoInfoViewController: UIViewController {
         resetSubviews()
         setupView()
         bindViewModel()
+        update(state: viewModel.state.value)
     }
 
+    // MARK: - Setup
+
     private func resetSubviews() {
-        streetLabel.text = nil
-        cityAndCountryLabel.text = nil
+        titleLabel.text = nil
+        subtitleLabel.text = nil
     }
 
     private func setupView() {
@@ -51,8 +60,30 @@ class GeoInfoViewController: UIViewController {
     }
 
     private func bindViewModel() {
-        streetLabel.reactive.text <~ viewModel.streetText
-        cityAndCountryLabel.reactive.text <~ viewModel.cityAndCountryText
+        titleLabel.reactive.text <~ viewModel.streetText
+        subtitleLabel.reactive.text <~ viewModel.cityAndCountryText
+
+        viewModel
+            .state
+            .signal
+            .observe(on: UIScheduler())
+            .observeValues { [unowned self] (state) in
+                self.update(state: state)
+        }
+    }
+
+    private func update(state: GeoInfoViewModel.State) {
+        switch state {
+        case .loaded:
+            subtitleLabel.isHidden = false
+            (view as? ProgressDisplayable)?.stopProgress()
+        case .failed:
+            subtitleLabel.isHidden = true
+            (view as? ProgressDisplayable)?.stopProgress()
+        case .inProgress:
+            subtitleLabel.isHidden = false
+            (view as? ProgressDisplayable)?.startProgress()
+        }
     }
 
     // MARK: - External Methods
@@ -64,6 +95,6 @@ class GeoInfoViewController: UIViewController {
     // MARK: - IBActions
 
     @IBAction private func didPressCloseButton(_ sender: UIButton) {
-        remove()
+        delegate?.geoInfoViewControllerSelectClose(self)
     }
 }
