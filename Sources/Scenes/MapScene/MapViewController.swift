@@ -64,12 +64,20 @@ class MapViewController: UIViewController {
 
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        addMaker(at: coordinate)
+
         guard let infoViewController = self.overlay else {
             presentInfo(for: coordinate)
             return
         }
 
         infoViewController.update(for: coordinate)
+    }
+
+    private func addMaker(at coordinate: CLLocationCoordinate2D) {
+        mapView.clear()
+        let marker = MapMarker(at: coordinate)
+        marker.map = mapView
     }
 }
 
@@ -80,5 +88,6 @@ extension MapViewController: GeoInfoViewControllerDelegate {
         }, completion: { _ in
             viewController.remove()
         })
+        self.mapView.clear()
     }
 }

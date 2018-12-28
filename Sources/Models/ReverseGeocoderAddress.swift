@@ -1,5 +1,11 @@
-struct ReverseGeocoderAddress: Decodable {
+struct ReverseGeocoderAddress {
+    let street: String
+    let postalCode: String
+    let city: String
+    let country: String
+}
 
+extension ReverseGeocoderAddress: Decodable {
     enum RootKeys: String, CodingKey {
         case results
     }
@@ -32,11 +38,6 @@ struct ReverseGeocoderAddress: Decodable {
             }
         }
     }
-
-    let street: String
-    let postalCode: String
-    let city: String
-    let country: String
 
     public init(from decoder: Decoder) throws {
         let superContainer = try decoder.container(keyedBy: RootKeys.self)

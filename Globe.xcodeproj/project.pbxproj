@@ -21,6 +21,7 @@
 		D680A86F21D4F015007B54D8 /* ReverseGeocoderAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A86E21D4F015007B54D8 /* ReverseGeocoderAddress.swift */; };
 		D680A87221D671A1007B54D8 /* ProgressDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */; };
 		D680A87421D675E6007B54D8 /* SkeletonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87321D675E6007B54D8 /* SkeletonLabel.swift */; };
+		D680A87621D694A6007B54D8 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87521D694A6007B54D8 /* MapMarker.swift */; };
 		D6B3698121D143A4006752C9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697621D143A4006752C9 /* MapViewController.swift */; };
 		D6B3698521D143A4006752C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697C21D143A4006752C9 /* AppDelegate.swift */; };
 		D6B3699121D143BB006752C9 /* GlobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3698F21D143BB006752C9 /* GlobeTests.swift */; };
@@ -59,6 +60,7 @@
 		D680A86E21D4F015007B54D8 /* ReverseGeocoderAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoderAddress.swift; sourceTree = "<group>"; };
 		D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDisplayable.swift; sourceTree = "<group>"; };
 		D680A87321D675E6007B54D8 /* SkeletonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLabel.swift; sourceTree = "<group>"; };
+		D680A87521D694A6007B54D8 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
 		D6B3695221D13F10006752C9 /* Globe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3696621D13F11006752C9 /* GlobeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3697621D143A4006752C9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D6B3697621D143A4006752C9 /* MapViewController.swift */,
+				D680A87521D694A6007B54D8 /* MapMarker.swift */,
 				D680A86221D4E2ED007B54D8 /* GeoInfo */,
 			);
 			path = MapScene;
@@ -487,6 +490,7 @@
 				D680A85721D3FC13007B54D8 /* ReverseGeocoder.swift in Sources */,
 				D680A85D21D3FD9F007B54D8 /* GoogleMapsReverseGeocoder.swift in Sources */,
 				D680A85B21D3FCEB007B54D8 /* ReverseGeocoderError.swift in Sources */,
+				D680A87621D694A6007B54D8 /* MapMarker.swift in Sources */,
 				D680A85421D3F454007B54D8 /* GeoInfoViewModel.swift in Sources */,
 				D680A86F21D4F015007B54D8 /* ReverseGeocoderAddress.swift in Sources */,
 				D680A86B21D4E946007B54D8 /* NSObject+ClassName.swift in Sources */,
