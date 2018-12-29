@@ -1,4 +1,3 @@
-import UIKit
 import GoogleMaps
 
 class MapMarker: GMSMarker {
@@ -6,7 +5,7 @@ class MapMarker: GMSMarker {
         super.init()
 
         position = coordinate
-        icon = UIImage(named: "map_marker")
+        icon = UIImage(assetIdentifier: .mapMarker)
         groundAnchor = CGPoint(x: 0.5, y: 1)
         appearAnimation = .pop
 
