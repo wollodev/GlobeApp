@@ -40,8 +40,8 @@ extension ReverseGeocoderAddress: Decodable {
     }
 
     public init(from decoder: Decoder) throws {
-        let superContainer = try decoder.container(keyedBy: RootKeys.self)
-        var results = try superContainer.nestedUnkeyedContainer(forKey: .results)
+        let container = try decoder.container(keyedBy: RootKeys.self)
+        var results = try container.nestedUnkeyedContainer(forKey: .results)
 
         guard results.count != 0 else {
             throw ReverseGeocoderError.noResult
