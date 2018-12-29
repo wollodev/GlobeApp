@@ -5,7 +5,7 @@ class MapViewController: UIViewController {
 
     // MARK: - Constants
 
-    let startingCoordinate = CLLocationCoordinate2D(latitude: 51.0902094, longitude: 6.585863)
+    let startingCoordinate = CLLocationCoordinate2D(latitude: 53.5499242, longitude: 9.9839786)
     let zoomLevel = Float(15.0)
     let overlayAnimationDuration = 0.2
 
