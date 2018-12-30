@@ -5,6 +5,21 @@ struct ReverseGeocoderAddress {
     let country: String
 }
 
+/* JSON Structure
+{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "Bedford Avenue",
+          "types": ["route", ...]
+        },...
+      ]
+    },...
+  ]
+}
+*/
+
 extension ReverseGeocoderAddress: Decodable {
     enum RootKeys: String, CodingKey {
         case results

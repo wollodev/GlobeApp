@@ -185,7 +185,6 @@
 			children = (
 				D680A85121D3F3AB007B54D8 /* GeoInfoViewController.swift */,
 				D680A85321D3F454007B54D8 /* GeoInfoViewModel.swift */,
-				D680A86321D4E33B007B54D8 /* GeoInfoViewController.xib */,
 			);
 			path = GeoInfo;
 			sourceTree = "<group>";
@@ -258,12 +257,28 @@
 			path = ReverseGeocoderAddress;
 			sourceTree = "<group>";
 		};
+		D680A88F21D8E0BA007B54D8 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				D680A86321D4E33B007B54D8 /* GeoInfoViewController.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		D680A89021D8E0D1007B54D8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D6B3699721D14408006752C9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		D6B3694921D13F10006752C9 = {
 			isa = PBXGroup;
 			children = (
 				D6B3697521D143A4006752C9 /* Sources */,
-				D6B3698E21D143BB006752C9 /* Tests */,
 				D6B3699521D14408006752C9 /* Resources */,
+				D6B3698E21D143BB006752C9 /* Tests */,
 				D6B3695321D13F10006752C9 /* Products */,
 				1B43EBE8FDA48AABEE19EBAC /* Pods */,
 				320BF2DCE53725F04945DF59 /* Frameworks */,
@@ -309,8 +324,9 @@
 		D6B3699521D14408006752C9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D680A89021D8E0D1007B54D8 /* Storyboards */,
+				D680A88F21D8E0BA007B54D8 /* Xibs */,
 				D6B3699621D14408006752C9 /* Assets.xcassets */,
-				D6B3699721D14408006752C9 /* LaunchScreen.storyboard */,
 				D6B3699B21D14408006752C9 /* Info.plist */,
 			);
 			path = Resources;
@@ -660,7 +676,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -715,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

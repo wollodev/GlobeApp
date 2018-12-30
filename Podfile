@@ -1,4 +1,4 @@
-platform :ios, '12.0'
+platform :ios, '11.0'
 
 target 'Globe' do
   use_frameworks!

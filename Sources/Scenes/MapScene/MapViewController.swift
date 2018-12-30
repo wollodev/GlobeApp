@@ -7,7 +7,7 @@ class MapViewController: UIViewController {
 
     let startingCoordinate = CLLocationCoordinate2D(latitude: 53.5499242, longitude: 9.9839786)
     let zoomLevel = Float(15.0)
-    let overlayAnimationDuration = 0.2
+    let geoInfoInsertAnimationDuration = 0.2
 
     // MARK: - Properties
 
@@ -50,7 +50,7 @@ class MapViewController: UIViewController {
         let insets = UIView.Insets(left: 20.0, bottom: 20.0, right: 20.0)
         self.embed(geoInfoViewController, with: insets, respectSafeArea: true)
 
-        UIView.animate(withDuration: overlayAnimationDuration) {
+        UIView.animate(withDuration: geoInfoInsertAnimationDuration) {
             geoInfoViewController.view.alpha = 1.0
         }
 
@@ -83,7 +83,7 @@ extension MapViewController: GMSMapViewDelegate {
 
 extension MapViewController: GeoInfoViewControllerDelegate {
     func geoInfoViewControllerSelectClose(_ viewController: GeoInfoViewController) {
-        UIView.animate(withDuration: overlayAnimationDuration, animations: {
+        UIView.animate(withDuration: geoInfoInsertAnimationDuration, animations: {
             viewController.view.alpha = 0.0
         }, completion: { _ in
             viewController.remove()

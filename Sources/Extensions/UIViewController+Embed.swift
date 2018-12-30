@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIViewController {
-    func embed(_ child: UIViewController, with insets: UIView.Insets? = nil, respectSafeArea: Bool) {
+    func embed(_ child: UIViewController, with insets: UIView.Insets? = .zero, respectSafeArea: Bool) {
         addChild(child)
         view.addSubview(child.view)
         child.didMove(toParent: self)
@@ -10,6 +10,8 @@ extension UIViewController {
             child.view.constraint(to: view, with: insets, respectSafeArea: respectSafeArea)
         }
     }
+
+    /// Removes embedded view controller and view from parent
 
     func remove() {
         guard parent != nil else {
