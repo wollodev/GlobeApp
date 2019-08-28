@@ -22,7 +22,6 @@
 		D680A87221D671A1007B54D8 /* ProgressDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */; };
 		D680A87421D675E6007B54D8 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87321D675E6007B54D8 /* ProgressView.swift */; };
 		D680A87621D694A6007B54D8 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87521D694A6007B54D8 /* MapMarker.swift */; };
-		D680A87C21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87B21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift */; };
 		D680A87F21D6EA09007B54D8 /* GeoInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87E21D6EA09007B54D8 /* GeoInfoViewModelTests.swift */; };
 		D680A88321D6EA6B007B54D8 /* ReverseGeocoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A88221D6EA6B007B54D8 /* ReverseGeocoderMock.swift */; };
 		D680A88521D7E281007B54D8 /* GeoInfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A88421D7E281007B54D8 /* GeoInfoViewControllerTests.swift */; };
@@ -69,7 +68,6 @@
 		D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDisplayable.swift; sourceTree = "<group>"; };
 		D680A87321D675E6007B54D8 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		D680A87521D694A6007B54D8 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
-		D680A87B21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AssetIdentifierTests.swift"; sourceTree = "<group>"; };
 		D680A87E21D6EA09007B54D8 /* GeoInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoInfoViewModelTests.swift; sourceTree = "<group>"; };
 		D680A88221D6EA6B007B54D8 /* ReverseGeocoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoderMock.swift; sourceTree = "<group>"; };
 		D680A88421D7E281007B54D8 /* GeoInfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoInfoViewControllerTests.swift; sourceTree = "<group>"; };
@@ -216,14 +214,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		D680A87A21D6AD8C007B54D8 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				D680A87B21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		D680A87D21D6E9F2007B54D8 /* GeoInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,7 +324,6 @@
 				D680A88121D6EA39007B54D8 /* Mocks */,
 				D680A88621D7E8DD007B54D8 /* Models */,
 				D680A87D21D6E9F2007B54D8 /* GeoInfo */,
-				D680A87A21D6AD8C007B54D8 /* Assets */,
 				D6B3699021D143BB006752C9 /* Info.plist */,
 			);
 			path = Tests;
@@ -629,7 +618,6 @@
 				D680A88821D7EB28007B54D8 /* ReverseGeocoderAddressTests.swift in Sources */,
 				D680A88521D7E281007B54D8 /* GeoInfoViewControllerTests.swift in Sources */,
 				D680A88321D6EA6B007B54D8 /* ReverseGeocoderMock.swift in Sources */,
-				D680A87C21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
