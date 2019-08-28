@@ -60,7 +60,7 @@ extension ReverseGeocoderAddress: Decodable {
 
         // swiftlint:disable empty_count
         guard results.count != 0 else {
-            throw ReverseGeocoderError.noResult
+            throw ReverseGeocoderError.parsingError
         }
 
         let addressComponents = try results.nestedContainer(keyedBy: ResultKeys.self)

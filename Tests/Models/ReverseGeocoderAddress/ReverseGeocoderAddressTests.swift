@@ -33,7 +33,7 @@ class ReverseGeocoderAddressTests: XCTestCase {
         do {
             let json = try Data(contentsOf: url)
             _ = try JSONDecoder().decode(ReverseGeocoderAddress.self, from: json)
-        } catch ReverseGeocoderError.noResult {
+        } catch ReverseGeocoderError.parsingError {
             XCTAssert(true)
         } catch {
             XCTFail("wrong error \(error)")

@@ -28,7 +28,7 @@ class GeoInfoViewModelTests: XCTestCase {
 
         XCTAssertEqual(subject.state.value, GeoInfoViewModel.State.failed)
         XCTAssertNil(subject.cityAndCountryText.value)
-        XCTAssertEqual(subject.streetText.value, "🙄 I found nothing, nada.")
+        XCTAssertEqual(subject.streetText.value, R.string.localizable.geoInfoNoResult())
 
         waitForExpectations(timeout: 0.1)
     }
@@ -47,7 +47,7 @@ class GeoInfoViewModelTests: XCTestCase {
 
         XCTAssertEqual(subject.state.value, GeoInfoViewModel.State.failed)
         XCTAssertNil(subject.cityAndCountryText.value)
-        XCTAssertEqual(subject.streetText.value, "🥴 *sigh* error.")
+        XCTAssertEqual(subject.streetText.value, R.string.localizable.geoInfoError())
 
         waitForExpectations(timeout: 0.1)
     }

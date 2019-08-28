@@ -2,9 +2,15 @@ import CoreLocation
 import ReactiveSwift
 
 class GoogleMapsReverseGeocoder: ReverseGeocoder {
+    // MARK: - Private Properties
+
+    private let baseUrl = "https://maps.googleapis.com/maps/api/geocode/json"
+    private let session = URLSession(configuration: .default)
+
+    // MARK: - Functions
+
     func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) ->
         SignalProducer<ReverseGeocoderAddress, ReverseGeocoderError> {
-            let baseUrl = "https://maps.googleapis.com/maps/api/geocode/json"
             var urlComponents = URLComponents(string: baseUrl)
             let coordinateQuery = URLQueryItem(name: "latlng", value: "\(coordinate.latitude),\(coordinate.longitude)")
             let locationTypeQuery = URLQueryItem(name: "location_type", value: "ROOFTOP")
@@ -16,22 +22,20 @@ class GoogleMapsReverseGeocoder: ReverseGeocoder {
                 fatalError("google maps reverse geocoder url is wrong")
             }
 
-            let session = URLSession(configuration: .default)
-
-            return SignalProducer { observer, _ in
-                let task = session.dataTask(with: url) { [weak self] data, _, error in
+            return SignalProducer { [weak self] observer, _ in
+                let task = self?.session.dataTask(with: url) { [weak self] data, _, error in
                     if error != nil {
                         observer.send(error: .networkError)
                     }
                     self?.processResult(data: data, observer: observer)
                 }
-                task.resume()
+                task?.resume()
             }
     }
 
     private func processResult(data: Data?, observer: Signal<ReverseGeocoderAddress, ReverseGeocoderError>.Observer) {
         guard let data = data else {
-            observer.send(error: .noResult)
+            observer.send(error: .parsingError)
             return
         }
 
