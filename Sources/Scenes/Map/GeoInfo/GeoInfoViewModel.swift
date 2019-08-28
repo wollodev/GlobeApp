@@ -52,9 +52,9 @@ class GeoInfoViewModel {
         state.swap(.failed)
         switch error {
         case .networkError, .parsingError:
-            streetText.swap("🥴 *sigh* error.")
+            streetText.swap(R.string.localizable.geoInfoError())
         case .noResult:
-            streetText.swap("🙄 I found nothing, nada.")
+            streetText.swap(R.string.localizable.geoInfoNoResult())
         }
         cityAndCountryText.swap(nil)
     }
