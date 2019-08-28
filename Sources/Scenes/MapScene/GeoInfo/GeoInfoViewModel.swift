@@ -2,7 +2,6 @@ import CoreLocation
 import ReactiveSwift
 
 class GeoInfoViewModel {
-
     enum State {
         case inProgress
         case loaded
@@ -40,7 +39,7 @@ class GeoInfoViewModel {
                 case .failure(let error):
                     self?.update(with: error)
                 }
-        }
+            }
     }
 
     private func startInProgress() {

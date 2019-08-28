@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,9 +20,8 @@
 		D680A86B21D4E946007B54D8 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A86A21D4E946007B54D8 /* NSObject+ClassName.swift */; };
 		D680A86F21D4F015007B54D8 /* ReverseGeocoderAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A86E21D4F015007B54D8 /* ReverseGeocoderAddress.swift */; };
 		D680A87221D671A1007B54D8 /* ProgressDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */; };
-		D680A87421D675E6007B54D8 /* ProgressLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87321D675E6007B54D8 /* ProgressLabel.swift */; };
+		D680A87421D675E6007B54D8 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87321D675E6007B54D8 /* ProgressView.swift */; };
 		D680A87621D694A6007B54D8 /* MapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87521D694A6007B54D8 /* MapMarker.swift */; };
-		D680A87921D6A787007B54D8 /* UIImage+AssetIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87821D6A787007B54D8 /* UIImage+AssetIdentifier.swift */; };
 		D680A87C21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87B21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift */; };
 		D680A87F21D6EA09007B54D8 /* GeoInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A87E21D6EA09007B54D8 /* GeoInfoViewModelTests.swift */; };
 		D680A88321D6EA6B007B54D8 /* ReverseGeocoderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A88221D6EA6B007B54D8 /* ReverseGeocoderMock.swift */; };
@@ -30,6 +29,7 @@
 		D680A88821D7EB28007B54D8 /* ReverseGeocoderAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D680A88721D7EB28007B54D8 /* ReverseGeocoderAddressTests.swift */; };
 		D680A88B21D7EBB2007B54D8 /* Address.json in Resources */ = {isa = PBXBuildFile; fileRef = D680A88921D7EBAD007B54D8 /* Address.json */; };
 		D680A88D21D7ED84007B54D8 /* NoAddressResult.json in Resources */ = {isa = PBXBuildFile; fileRef = D680A88C21D7ED84007B54D8 /* NoAddressResult.json */; };
+		D69F73172316A54E004771E8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69F73162316A54D004771E8 /* R.generated.swift */; };
 		D6B3698121D143A4006752C9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697621D143A4006752C9 /* MapViewController.swift */; };
 		D6B3698521D143A4006752C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B3697C21D143A4006752C9 /* AppDelegate.swift */; };
 		D6B3699C21D14408006752C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6B3699621D14408006752C9 /* Assets.xcassets */; };
@@ -66,9 +66,8 @@
 		D680A86A21D4E946007B54D8 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		D680A86E21D4F015007B54D8 /* ReverseGeocoderAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoderAddress.swift; sourceTree = "<group>"; };
 		D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDisplayable.swift; sourceTree = "<group>"; };
-		D680A87321D675E6007B54D8 /* ProgressLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressLabel.swift; sourceTree = "<group>"; };
+		D680A87321D675E6007B54D8 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		D680A87521D694A6007B54D8 /* MapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarker.swift; sourceTree = "<group>"; };
-		D680A87821D6A787007B54D8 /* UIImage+AssetIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AssetIdentifier.swift"; sourceTree = "<group>"; };
 		D680A87B21D6ADB0007B54D8 /* UIImage+AssetIdentifierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AssetIdentifierTests.swift"; sourceTree = "<group>"; };
 		D680A87E21D6EA09007B54D8 /* GeoInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoInfoViewModelTests.swift; sourceTree = "<group>"; };
 		D680A88221D6EA6B007B54D8 /* ReverseGeocoderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoderMock.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		D680A88721D7EB28007B54D8 /* ReverseGeocoderAddressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoderAddressTests.swift; sourceTree = "<group>"; };
 		D680A88921D7EBAD007B54D8 /* Address.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Address.json; sourceTree = "<group>"; };
 		D680A88C21D7ED84007B54D8 /* NoAddressResult.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NoAddressResult.json; sourceTree = "<group>"; };
+		D69F73162316A54D004771E8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		D6B3695221D13F10006752C9 /* Globe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Globe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3696621D13F11006752C9 /* GlobeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlobeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B3697621D143A4006752C9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				D680A87121D671A1007B54D8 /* ProgressDisplayable.swift */,
-				D680A87321D675E6007B54D8 /* ProgressLabel.swift */,
+				D680A87321D675E6007B54D8 /* ProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -209,7 +209,6 @@
 		D680A87721D6A75E007B54D8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D680A87821D6A787007B54D8 /* UIImage+AssetIdentifier.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -273,6 +272,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		D69F73152316A502004771E8 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D69F73162316A54D004771E8 /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		D6B3694921D13F10006752C9 = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +304,7 @@
 		D6B3697521D143A4006752C9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D69F73152316A502004771E8 /* Generated */,
 				D680A87721D6A75E007B54D8 /* Assets */,
 				D680A87021D67190007B54D8 /* Views */,
 				D680A86D21D4EFFC007B54D8 /* Models */,
@@ -341,12 +349,13 @@
 			buildPhases = (
 				908B917BD2EC6C6DD7B3A08F /* [CP] Check Pods Manifest.lock */,
 				D613485321D1566F00F4F284 /* Generate ApiKeys Enum */,
+				D69F73142316A499004771E8 /* R.swift */,
+				D613485721D15A0300F4F284 /* SwiftLint */,
 				D6B3694E21D13F10006752C9 /* Sources */,
 				D6B3694F21D13F10006752C9 /* Frameworks */,
 				D6B3695021D13F10006752C9 /* Resources */,
 				88D63066F74F70625CC96109 /* [CP] Embed Pods Frameworks */,
 				75825F6E8514D6484640DA11 /* [CP] Copy Pods Resources */,
-				D613485721D15A0300F4F284 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -388,9 +397,11 @@
 				TargetAttributes = {
 					D6B3695121D13F10006752C9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 					D6B3696521D13F11006752C9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = D6B3695121D13F10006752C9;
 					};
 				};
@@ -443,16 +454,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Globe/Pods-Globe-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Globe/Pods-Globe-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Globe/Pods-Globe-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,20 +471,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Globe/Pods-Globe-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Globe/Pods-Globe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Globe/Pods-Globe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -565,6 +562,26 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\nfi\n";
 		};
+		D69F73142316A499004771E8 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Sources/Generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/Sources/Generated/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -579,13 +596,13 @@
 				D680A85B21D3FCEB007B54D8 /* ReverseGeocoderError.swift in Sources */,
 				D680A87621D694A6007B54D8 /* MapMarker.swift in Sources */,
 				D680A85421D3F454007B54D8 /* GeoInfoViewModel.swift in Sources */,
-				D680A87921D6A787007B54D8 /* UIImage+AssetIdentifier.swift in Sources */,
+				D69F73172316A54E004771E8 /* R.generated.swift in Sources */,
 				D680A86F21D4F015007B54D8 /* ReverseGeocoderAddress.swift in Sources */,
 				D680A86B21D4E946007B54D8 /* NSObject+ClassName.swift in Sources */,
 				D680A86121D404E7007B54D8 /* UIViewController+Embed.swift in Sources */,
 				D680A85221D3F3AB007B54D8 /* GeoInfoViewController.swift in Sources */,
 				D680A85021D3E868007B54D8 /* UIView+Constraint.swift in Sources */,
-				D680A87421D675E6007B54D8 /* ProgressLabel.swift in Sources */,
+				D680A87421D675E6007B54D8 /* ProgressView.swift in Sources */,
 				D680A87221D671A1007B54D8 /* ProgressDisplayable.swift in Sources */,
 				D6B3698121D143A4006752C9 /* MapViewController.swift in Sources */,
 			);
@@ -757,7 +774,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerdburgers.Globe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -778,7 +795,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerdburgers.Globe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -800,7 +817,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerdburgers.GlobeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Globe.app/Globe";
 			};
@@ -823,7 +840,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nerdburgers.GlobeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Globe.app/Globe";
 			};

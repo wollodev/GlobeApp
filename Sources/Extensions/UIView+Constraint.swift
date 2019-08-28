@@ -13,11 +13,11 @@ extension UIView {
             self.bottom = bottom
             self.right = right
         }
-        static let zero: Insets = Insets(top: 0, left: 0, bottom: 0, right: 0)
+
+        static let zero = Insets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
     func constraint(to other: UIView, with insets: Insets = Insets.zero, respectSafeArea: Bool = false) {
-
         if let leftConstant = insets.left {
             let otherLeadingAnchor = respectSafeArea ? other.safeAreaLayoutGuide.leadingAnchor : other.leadingAnchor
             leadingAnchor.constraint(equalTo: otherLeadingAnchor, constant: leftConstant).isActive = true

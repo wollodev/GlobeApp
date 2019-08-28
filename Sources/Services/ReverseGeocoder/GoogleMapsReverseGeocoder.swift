@@ -2,7 +2,6 @@ import CoreLocation
 import ReactiveSwift
 
 class GoogleMapsReverseGeocoder: ReverseGeocoder {
-
     func reverseGeocodeCoordinate(_ coordinate: CLLocationCoordinate2D) ->
         SignalProducer<ReverseGeocoderAddress, ReverseGeocoderError> {
             let baseUrl = "https://maps.googleapis.com/maps/api/geocode/json"
@@ -19,8 +18,8 @@ class GoogleMapsReverseGeocoder: ReverseGeocoder {
 
             let session = URLSession(configuration: .default)
 
-            return SignalProducer { (observer, _) in
-                let task = session.dataTask(with: url) { [weak self] (data, _, error) in
+            return SignalProducer { observer, _ in
+                let task = session.dataTask(with: url) { [weak self] data, _, error in
                     if error != nil {
                         observer.send(error: .networkError)
                     }

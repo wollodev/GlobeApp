@@ -5,9 +5,8 @@ class MapMarker: GMSMarker {
         super.init()
 
         position = coordinate
-        icon = UIImage(assetIdentifier: .mapMarker)
+        icon = R.image.map_marker()
         groundAnchor = CGPoint(x: 0.5, y: 1)
         appearAnimation = .pop
-
     }
 }

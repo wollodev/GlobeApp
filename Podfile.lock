@@ -1,40 +1,44 @@
 PODS:
-  - GoogleMaps (2.7.0):
-    - GoogleMaps/Maps (= 2.7.0)
-  - GoogleMaps/Base (2.7.0)
-  - GoogleMaps/Maps (2.7.0):
+  - GoogleMaps (3.3.0):
+    - GoogleMaps/Maps (= 3.3.0)
+  - GoogleMaps/Base (3.3.0)
+  - GoogleMaps/Maps (3.3.0):
     - GoogleMaps/Base
-  - ReactiveCocoa (8.0.2):
-    - ReactiveSwift (~> 4.0)
-  - ReactiveSwift (4.0.0):
-    - Result (~> 4.0)
-  - Result (4.0.0)
-  - Sourcery (0.15.0)
-  - SwiftLint (0.29.2)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - ReactiveCocoa (10.0.0):
+    - ReactiveSwift (~> 6.0)
+  - ReactiveSwift (6.0.0)
+  - Sourcery (0.16.2)
+  - SwiftLint (0.34.0)
 
 DEPENDENCIES:
-  - GoogleMaps (~> 2.7)
-  - ReactiveCocoa (~> 8.0)
-  - Sourcery (~> 0.15)
+  - GoogleMaps (~> 3.3)
+  - R.swift (~> 5.0)
+  - ReactiveCocoa (~> 10.0)
+  - Sourcery (~> 0.16)
   - SwiftLint (~> 0.29)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GoogleMaps
+    - R.swift
+    - R.swift.Library
     - ReactiveCocoa
     - ReactiveSwift
-    - Result
     - Sourcery
     - SwiftLint
 
 SPEC CHECKSUMS:
-  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
-  ReactiveCocoa: fbd26e9ba60e98417ee47433e59465a98ed9da0f
-  ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
-  Sourcery: 5895672cae353cdbfa95f3f4aaeb75a664d76f6a
-  SwiftLint: 47df60bdea6e7e902b193b6596db8683aafd86a3
+  GoogleMaps: cfee83da305b9aaeccf92c24ac79df11c3003492
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  ReactiveCocoa: 6d4c37ba236f5d9a7a55b2172cd09f19ba85f574
+  ReactiveSwift: 24b7ed245617bbfd30ee0c87779b6c64ac1b4518
+  Sourcery: 3f406d227efd179773b3c3599ebd1700d1a6013c
+  SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: 81089730ba607757ffc41b49892e5f756c85dac2
+PODFILE CHECKSUM: 708ad33eddcdd18276b47bd4036c78c8b872ef09
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.7.5

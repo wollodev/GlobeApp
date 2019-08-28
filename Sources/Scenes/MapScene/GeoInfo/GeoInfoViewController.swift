@@ -1,14 +1,13 @@
-import UIKit
 import CoreLocation
 import ReactiveCocoa
 import ReactiveSwift
+import UIKit
 
 protocol GeoInfoViewControllerDelegate: AnyObject {
     func geoInfoViewControllerSelectClose(_ viewController: GeoInfoViewController)
 }
 
 class GeoInfoViewController: UIViewController {
-
     // MARK: - Properties
 
     private let viewModel: GeoInfoViewModel
@@ -29,6 +28,7 @@ class GeoInfoViewController: UIViewController {
         super.init(nibName: GeoInfoViewController.className, bundle: nil)
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -36,6 +36,8 @@ class GeoInfoViewController: UIViewController {
     // MARK: - UIViewController Lifecycle
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         resetSubviews()
         setupView()
         bindViewModel()
@@ -67,9 +69,9 @@ class GeoInfoViewController: UIViewController {
             .state
             .signal
             .observe(on: UIScheduler())
-            .observeValues { [unowned self] (state) in
+            .observeValues { [unowned self] state in
                 self.update(state: state)
-        }
+            }
     }
 
     private func update(state: GeoInfoViewModel.State) {

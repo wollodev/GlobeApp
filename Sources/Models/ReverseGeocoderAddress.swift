@@ -58,6 +58,7 @@ extension ReverseGeocoderAddress: Decodable {
         let container = try decoder.container(keyedBy: RootKeys.self)
         var results = try container.nestedUnkeyedContainer(forKey: .results)
 
+        // swiftlint:disable empty_count
         guard results.count != 0 else {
             throw ReverseGeocoderError.noResult
         }
@@ -74,7 +75,7 @@ extension ReverseGeocoderAddress: Decodable {
             let name = try object.decode(String.self, forKey: .name)
 
             types
-                .filter { $0 != .unknown}
+                .filter { $0 != .unknown }
                 .forEach { components[$0] = name }
         }
 

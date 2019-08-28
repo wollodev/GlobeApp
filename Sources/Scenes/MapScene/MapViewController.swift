@@ -1,11 +1,10 @@
-import UIKit
 import GoogleMaps
+import UIKit
 
 class MapViewController: UIViewController {
-
     // MARK: - Constants
 
-    let startingCoordinate = CLLocationCoordinate2D(latitude: 53.5499242, longitude: 9.9839786)
+    let startingCoordinate = CLLocationCoordinate2D(latitude: 53.549_924_2, longitude: 9.983_978_6)
     let zoomLevel = Float(15.0)
     let geoInfoInsertAnimationDuration = 0.2
 
@@ -57,7 +56,6 @@ class MapViewController: UIViewController {
         self.overlay = geoInfoViewController
         geoInfoViewController.delegate = self
     }
-
 }
 
 // MARK: - GMSMapViewDelegate

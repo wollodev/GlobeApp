@@ -7,9 +7,10 @@ protocol ProgressDisplayable {
 
 extension ProgressDisplayable where Self: UIView {
     func startProgress() {
+        let whiteValue: CGFloat = 0.7
         let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.color = UIColor(white: 0.7, alpha: 1.0)
+        activityIndicator.color = UIColor(white: whiteValue, alpha: 1.0)
         activityIndicator.hidesWhenStopped = true
         activityIndicator.tag = 911
         activityIndicator.startAnimating()
